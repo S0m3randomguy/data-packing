@@ -1,5 +1,4 @@
 //% blockNamespace=Packing 
-//% icon="\uf466"
 
 class Heap {
     data: object
@@ -9,6 +8,7 @@ class Heap {
 }
 
 //% color="#A37C4B"
+//% icon="\uf466"
 namespace Packing {
     //% blockId=packing_create
     //% color="#A37C4B"
