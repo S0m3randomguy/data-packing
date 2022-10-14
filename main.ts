@@ -1,4 +1,4 @@
-//% blockNamespace=Packing color="#A37C4B"
+//% blockNamespace=Packing 
 //% icon="\uf466"
 
 class Heap {
@@ -8,6 +8,7 @@ class Heap {
     }
 }
 
+//% color="#A37C4B"
 namespace Packing {
     //% blockId=packing_create
     //% color="#A37C4B"
