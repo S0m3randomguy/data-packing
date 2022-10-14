@@ -1,5 +1,5 @@
 //% blockNamespace=Packing color="#A37C4B"
-//% icon="\uf187"
+//% icon="\uf466"
 
 class Heap {
     data: object
@@ -10,6 +10,7 @@ class Heap {
 
 namespace Packing {
     //% blockId=packing_create
+    //% color="#A37C4B"
     //% block="create new heap"
     //% blockSetVariable=data
     export function create_heap(): Heap {
