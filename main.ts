@@ -1,7 +1,7 @@
 
 
 
-//% color="#AA278D" weight=0 icon=\uf49e
+//% color="#AA278D" weight=0 icon="\uf49e"
 namespace Packing {
 
     //% block="create new heap"
