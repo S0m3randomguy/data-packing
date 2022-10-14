@@ -1,14 +1,18 @@
+//% blockNamespace=Packing color="#A37C4B"
+//% icon="\uf187"
 
+class Heap {
+    data: object
+    constructor() {
+        this.data = {}
+    }
+}
 
-
-//% color="#AA278D" weight=0 icon="\uf49e"
 namespace Packing {
-
+    //% blockId=packing_create
     //% block="create new heap"
-    //% blockId="packing_create"
-    //% weight="100"
-    export function create_data_heap() {
-        let obj = {}
-        return obj
+    //% blockSetVariable=data
+    export function create_heap(): Heap {
+        return new Heap()
     }
 }
