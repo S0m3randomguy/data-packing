@@ -8,7 +8,7 @@ class Heap {
 }
 
 //% color="#A37C4B"
-//% icon="\uf466"
+//% icon="\uf49e"
 namespace Packing {
     //% blockId=packing_create
     //% color="#A37C4B"
