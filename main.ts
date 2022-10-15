@@ -38,7 +38,7 @@ namespace Packing {
         heap.add(name, item)
     }
 
-    //% blockId=packing_add_item
+    //% blockId=packing_remove_item
     //% block="remove property $name from $heap=variables_get(data)"
     //% name.defl="name"
     //% group="Modification"
