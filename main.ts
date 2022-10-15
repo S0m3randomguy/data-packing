@@ -1,7 +1,10 @@
 //% blockNamespace=Packing 
 
+
+
 class Heap {
     data: any
+    checksum: Checksum
     constructor() {
         this.data = {}
     }
