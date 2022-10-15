@@ -10,6 +10,11 @@ class Heap {
         if (!name) {return}
         this.data[name] = data
     }
+
+    remove(name: string) {
+        if (!this.data[name]) {return}
+        delete this.data[name]
+    }
 }
 
 //% color="#A37C4B"
@@ -31,5 +36,14 @@ namespace Packing {
     export function add_item(heap: Heap, name: string, item: any) {
         if (!name || !item) {return} 
         heap.add(name, item)
+    }
+
+    //% blockId=packing_add_item
+    //% block="remove property $name from $heap=variables_get(data)"
+    //% name.defl="name"
+    //% group="Modification"
+    export function remove_item(heap: Heap, name: string) {
+        if (!name) {return}
+        heap.remove(name)
     }
 }
