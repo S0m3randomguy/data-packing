@@ -66,7 +66,7 @@ namespace Packing {
     }
 
     //% blockId=packing_get_item
-    //% block="get property from $heap=variables_get(data)"
+    //% block="get property $name from $heap=variables_get(data)"
     //% name.defl="name"
     //% group="Modify"
     export function get_item(heap: Heap, name: string): any {
