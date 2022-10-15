@@ -1,7 +1,5 @@
 //% blockNamespace=Packing 
 
-
-
 class Heap {
     data: any
     checksum: Checksum
@@ -73,6 +71,13 @@ namespace Packing {
     //% group="Modify"
     export function get_item(heap: Heap, name: string): any {
         return heap.get_item(name)
+    }
+
+    //% blockId=packing_wipe
+    //% block="wipe all data from $heap=variables_get(data)"
+    //% group="Modify"
+    export function wipe(heap: Heap) {
+        heap.wipe()
     }
 
     //% blockId=packing_compile
