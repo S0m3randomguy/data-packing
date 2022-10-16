@@ -72,7 +72,7 @@ class Heap {
         }
         if (target == Target.DeviceStorage) {
             blockSettings.writeString(name, compilation)
-        }
+        } else {console.log(compilation)}
     }
 
     wipe() {
