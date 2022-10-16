@@ -2,7 +2,8 @@
     "name": "Data Packing",
     "description": "",
     "dependencies": {
-        "device": "*"
+        "device": "*",
+        "settings-blocks": "github:microsoft/pxt-settings-blocks#v1.0.0"
     },
     "files": [
         "main.blocks",
