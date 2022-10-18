@@ -8,6 +8,7 @@ enum Target {
 
 const MAIN_SEPARATOR  = "&"
 const ARRAY_SEPARATOR = "$"
+const TYPE_SEPARATOR  = "%"
 
 function get_type(item: any, name: string) {
     let item_type = typeof (item)
@@ -30,6 +31,9 @@ function to_string(item: any, _type: string) {
     }
     let array_string = ""
     for (let i = 0; i < item.length; i++) {
+        if (typeof array_string[i] == "object") {
+            throw "Unsupported array type"
+        }
         array_string += item[i]
         if (i < item.length - 1) {array_string += ARRAY_SEPARATOR}
     }
@@ -68,6 +72,7 @@ class Heap {
             item = this.data[keys[i]]
             _type = get_type(item, keys[i])
             compilation += to_string(item, _type)
+            compilation += TYPE_SEPARATOR + _type
             if (i < keys.length - 1) {compilation += MAIN_SEPARATOR}
         }
         if (target == Target.DeviceStorage) {
