@@ -21,11 +21,15 @@ function get_type(item: any, name: string) {
     throw `Cannot compile object '${name}' of type ${item_type}`
 }
 
+function num_to_string(num: number) {
+    return num.toString()
+}
+
 function to_string(item: any, _type: string) {
     if (_type == "string") {
         return item
     } else if (_type == "number") {
-        return item.toString()
+        return num_to_string(item)
     } else if (_type == "boolean") {
         return item ? "true" : "false"
     }
@@ -98,7 +102,7 @@ namespace Packing {
     }
 
     //% blockId=packing_add_item
-    //% block="add property $name = $item to $heap=variables_get(data)"
+    //% block="set property $name = $item to $heap=variables_get(data)"
     //% name.defl="name"
     //% group="Modify"
     export function add_item(heap: Heap, name: string, item: any) {
