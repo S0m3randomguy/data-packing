@@ -27,15 +27,18 @@ function num_to_string(num: number) {
 
 function to_string(item: any, _type: string) {
     if (_type == "string") {
+        if (item.includes(MAIN_SEPARATOR) ||
+        item.includes(ARRAY_SEPARATOR) ||
+        item.includes(TYPE_SEPARATOR)) {
+            throw "String cannot contain '&', '$' or '%'"
+        }
         return item
     } else if (_type == "number") {
         return num_to_string(item)
-    } else if (_type == "boolean") {
-        return item ? "true" : "false"
     }
     let array_string = ""
     for (let i = 0; i < item.length; i++) {
-        if (typeof array_string[i] == "object") {
+        if (typeof array_string[i] != "string") {
             throw "Unsupported array type"
         }
         array_string += item[i]
